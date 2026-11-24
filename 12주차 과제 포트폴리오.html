@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>김보미 | 혜전대학교 간호학과 포트폴리오</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Pretendard & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 아이콘 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ivory: '#FFF6E5',
+            ivoryLight: '#FFFBF2',
+            sage: '#84B59F',
+            sageDark: '#689A84',
+            coral: '#F96167',
+            coralDark: '#E04B51',
+            darkTeal: '#028090',
+            darkTealDeep: '#015E6B',
+            charcoal: '#2D3748',
+          },
+          fontFamily: {
+            sans: ['"Noto Sans KR"', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-ivory text-charcoal font-sans antialiased selection:bg-sage/30 selection:text-darkTealDeep">
+
+  <!-- 상단 고정 네비게이션 바 -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-ivory/85 backdrop-blur-md border-b border-sage/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        <!-- 로고 / 이름 -->
+        <a href="#hero" class="flex items-center gap-2.5 group">
+          <div class="w-9 h-9 rounded-xl bg-darkTeal text-white flex items-center justify-center shadow-sm group-hover:bg-coral transition-colors">
+            <i class="fa-solid fa-heart-pulse text-base"></i>
+          </div>
+          <div>
+            <span class="font-bold text-lg tracking-tight text-darkTealDeep block leading-none">BOMI.KIM</span>
+            <span class="text-[11px] font-medium text-sageDark tracking-wider">Hyejeon Nursing '26</span>
+          </div>
+        </a>
+
+        <!-- 데스크톱 메뉴 -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#about" class="text-sm font-semibold text-charcoal/80 hover:text-darkTeal transition-colors">자기소개 (About)</a>
+          <a href="#projects" class="text-sm font-semibold text-charcoal/80 hover:text-darkTeal transition-colors">프로젝트 (Projects)</a>
+          <a href="#contact" class="text-sm font-semibold text-charcoal/80 hover:text-darkTeal transition-colors">연락처 (Contact)</a>
+          <a href="#contact" class="px-4 py-2 rounded-full bg-darkTeal text-white text-sm font-semibold hover:bg-darkTealDeep transition-all shadow-sm">
+            메시지 남기기
+          </a>
+        </nav>
+
+        <!-- 모바일 햄버거 버튼 -->
+        <button id="mobile-menu-btn" aria-label="메뉴 열기" class="md:hidden p-2.5 rounded-xl text-darkTealDeep hover:bg-sage/20 transition-colors">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- 모바일 드롭다운 메뉴 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-ivoryLight border-b border-sage/20 px-4 pt-2 pb-5 space-y-2 shadow-lg">
+      <a href="#about" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-charcoal hover:bg-sage/15 hover:text-darkTeal">자기소개 (About)</a>
+      <a href="#projects" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-charcoal hover:bg-sage/15 hover:text-darkTeal">프로젝트 (Projects)</a>
+      <a href="#contact" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-charcoal hover:bg-sage/15 hover:text-darkTeal">연락처 (Contact)</a>
+    </div>
+  </header>
+
+  <!-- 1. 히어로 & 자기소개(About Me) 섹션 -->
+  <section id="hero" class="pt-28 pb-16 sm:pt-36 sm:pb-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      
+      <!-- 왼쪽 텍스트 영역 -->
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sage/20 text-darkTealDeep text-xs sm:text-sm font-semibold">
+          <span class="w-2 h-2 rounded-full bg-coral animate-pulse"></span>
+          <span>따뜻한 돌봄과 디지털 역량을 겸비한 예비 간호사</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight tracking-tight">
+          안녕하세요,<br />
+          <span class="text-darkTeal">혜전대학교 간호학과 1학년</span><br />
+          <span class="relative inline-block mt-1">
+            <span class="relative z-10 text-charcoal">김보미</span>
+            <span class="absolute bottom-1 left-0 w-full h-3 bg-coral/25 -z-0 rounded-md"></span>
+          </span>입니다.
+        </h1>
+
+        <p class="text-base sm:text-lg text-charcoal/80 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+          환자의 마음을 먼저 어루만지는 따뜻한 공감 능력에, <strong>AI 및 디지털 미디어 도구</strong>를 활용한 창의적인 보건 교육 콘텐츠 기획 역량을 더해 누구나 이해하기 쉬운 건강 정보를 전달하는 간호사를 꿈꿉니다.
+        </p>
+
+        <!-- CTA 버튼 그룹 -->
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+          <a href="#projects" class="px-6 py-3.5 rounded-2xl bg-darkTeal text-white font-semibold text-sm sm:text-base hover:bg-darkTealDeep transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+            <span>이번 학기 프로젝트 보기</span>
+            <i class="fa-solid fa-arrow-down text-xs"></i>
+          </a>
+          <a href="#about" class="px-6 py-3.5 rounded-2xl bg-white text-darkTealDeep border border-sage/40 font-semibold text-sm sm:text-base hover:bg-sage/10 transition-all">
+            나의 역량 살펴보기
+          </a>
+        </div>
+      </div>
+
+      <!-- 오른쪽 프로필 카드 영역 -->
+      <div class="lg:col-span-5 flex justify-center">
+        <div class="relative w-full max-w-sm bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-sage/25">
+          <!-- 장식용 상단 뱃지 -->
+          <div class="absolute -top-4 -right-3 bg-coral text-white text-xs font-bold px-3.5 py-1.5 rounded-full shadow-md transform rotate-3">
+            Future RN 🩺
+          </div>
+
+          <!-- 프로필 이미지 플레이스홀더 (추후 본인 사진으로 교체 가능) -->
+          <div class="w-32 h-32 sm:w-36 sm:h-36 mx-auto rounded-full bg-gradient-to-br from-sage/30 to-darkTeal/20 p-1.5 mb-5">
+            <div class="w-full h-full rounded-full bg-ivoryLight flex flex-col items-center justify-center overflow-hidden border border-sage/30">
+              <!-- 실제 이미지 사용 시 아래 img 태그의 src를 교체하세요 -->
+              <img 
+                src="https://placehold.co/300x300/84B59F/FFFFFF?text=Bomi+Kim" 
+                alt="김보미 프로필 사진" 
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                class="w-full h-full object-cover"
+              />
+              <div class="hidden flex-col items-center justify-center text-darkTeal">
+                <i class="fa-solid fa-user-nurse text-4xl mb-1"></i>
+                <span class="text-xs font-medium">김보미</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center space-y-1.5">
+            <h2 class="text-xl font-bold text-charcoal">김보미 (Kim Bo-mi)</h2>
+            <p class="text-sm font-medium text-darkTeal">혜전대학교 간호학과 1학년</p>
+            <p class="text-xs text-charcoal/60">충청남도 홍성군 · 보건의료 콘텐츠 크리에이터</p>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-sage/20 grid grid-cols-3 gap-2 text-center">
+            <div class="p-2 rounded-xl bg-ivoryLight">
+              <span class="block text-lg font-bold text-darkTeal">3+</span>
+              <span class="text-[11px] text-charcoal/70 font-medium">학기 프로젝트</span>
+            </div>
+            <div class="p-2 rounded-xl bg-ivoryLight">
+              <span class="block text-lg font-bold text-coral">AI</span>
+              <span class="text-[11px] text-charcoal/70 font-medium">교육콘텐츠 제작</span>
+            </div>
+            <div class="p-2 rounded-xl bg-ivoryLight">
+              <span class="block text-lg font-bold text-sageDark">100%</span>
+              <span class="text-[11px] text-charcoal/70 font-medium">열정과 공감</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Me 상세 & 핵심 역량 태그 영역 -->
+    <div id="about" class="mt-20 pt-10 scroll-mt-24">
+      <div class="bg-white/90 rounded-3xl p-6 sm:p-10 shadow-sm border border-sage/25">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+          <div>
+            <span class="text-xs font-bold tracking-widest uppercase text-coral">About Me & Core Skills</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-charcoal mt-1">예비 간호사로서의 다짐과 핵심 역량</h2>
+          </div>
+          <p class="text-sm text-charcoal/70 max-w-md">
+            전공 기초 지식을 탄탄히 다지는 동시에, 디지털 리터러시를 결합해 실용적인 보건 교육 자료를 제작합니다.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div class="p-5 rounded-2xl bg-ivoryLight border border-sage/20">
+            <div class="w-10 h-10 rounded-xl bg-darkTeal/10 text-darkTeal flex items-center justify-center mb-3">
+              <i class="fa-solid fa-hand-holding-heart text-lg"></i>
+            </div>
+            <h3 class="font-bold text-base text-charcoal mb-1.5">사람 중심의 따뜻한 돌봄</h3>
+            <p class="text-sm text-charcoal/75 leading-relaxed">
+              환자와 보호자의 눈높이에서 경청하고 소통하며, 신뢰를 주는 간호 전문직의 기본 태도를 기르고 있습니다.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-ivoryLight border border-sage/20">
+            <div class="w-10 h-10 rounded-xl bg-coral/10 text-coral flex items-center justify-center mb-3">
+              <i class="fa-solid fa-wand-magic-sparkles text-lg"></i>
+            </div>
+            <h3 class="font-bold text-base text-charcoal mb-1.5">AI 활용 보건 교육 콘텐츠</h3>
+            <p class="text-sm text-charcoal/75 leading-relaxed">
+              Typecast 음성 합성, Suno AI 음원 제작 등 생성형 AI를 활용해 직관적이고 몰입감 있는 숏폼 교육 영상을 기획합니다.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-ivoryLight border border-sage/20">
+            <div class="w-10 h-10 rounded-xl bg-sage/20 text-sageDark flex items-center justify-center mb-3">
+              <i class="fa-solid fa-laptop-code text-lg"></i>
+            </div>
+            <h3 class="font-bold text-base text-charcoal mb-1.5">웹 구현 및 시각 디자인</h3>
+            <p class="text-sm text-charcoal/75 leading-relaxed">
+              HTML/CSS/JS 기초 웹 개발부터 감염 예방 인포그래픽 포스터 제작까지, 정보를 명확히 시각화하는 역량을 갖추었습니다.
+            </p>
+          </div>
+        </div>
+
+        <!-- 핵심 역량 태그 리스트 -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-charcoal/60 mb-3">Core Competencies</h4>
+          <div class="flex flex-wrap gap-2.5">
+            <span class="px-4 py-2 rounded-full bg-darkTeal/10 text-darkTealDeep text-sm font-semibold">#보건_교육_콘텐츠_기획</span>
+            <span class="px-4 py-2 rounded-full bg-coral/10 text-coralDark text-sm font-semibold">#AI_영상·디자인_활용</span>
+            <span class="px-4 py-2 rounded-full bg-sage/25 text-darkTealDeep text-sm font-semibold">#기초_간호_술기</span>
+            <span class="px-4 py-2 rounded-full bg-ivory border border-sage/40 text-charcoal text-sm font-semibold">#환자_중심_커뮤니케이션</span>
+            <span class="px-4 py-2 rounded-full bg-ivory border border-sage/40 text-charcoal text-sm font-semibold">#인포그래픽_시각화</span>
+            <span class="px-4 py-2 rounded-full bg-ivory border border-sage/40 text-charcoal text-sm font-semibold">#웹_기초_프론트엔드</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. 프로젝트 갤러리(Projects) 섹션 -->
+  <section id="projects" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto scroll-mt-16">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="text-xs font-bold tracking-widest uppercase text-coral">Semester Portfolio</span>
+      <h2 class="text-2xl sm:text-3xl font-bold text-charcoal mt-1">이번 학기 주요 프로젝트</h2>
+      <p class="text-sm sm:text-base text-charcoal/75 mt-2">
+        카드를 클릭하면 프로젝트 상세 기획 의도, 사용 툴, 그리고 결과물 미리보기(영상/게임/포스터)를 확인하실 수 있습니다.
+      </p>
+    </div>
+
+    <!-- 프로젝트 카드 그리드 (JS로 동적 렌더링하여 추후 유지보수 및 링크 교체 용이) -->
+    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-3 gap-7">
+      <!-- JavaScript에서 프로젝트 카드가 렌더링됩니다 -->
+    </div>
+
+    <!-- 안내 팁 박스 (과제 제출 및 파일 교체 안내용) -->
+    <div class="mt-10 p-4 sm:p-5 rounded-2xl bg-sage/15 border border-sage/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div class="flex items-start sm:items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-darkTeal text-white flex items-center justify-center shrink-0 mt-0.5 sm:mt-0">
+          <i class="fa-solid fa-folder-open text-sm"></i>
+        </div>
+        <p class="text-xs sm:text-sm text-charcoal/85">
+          <strong>포트폴리오 관리 팁:</strong> 코드 하단의 <code class="px-1.5 py-0.5 rounded bg-white text-darkTeal font-mono text-xs">projectsData</code> 배열에서 각 프로젝트의 썸네일 이미지 경로와 실제 영상·게임·PDF 링크를 언제든 손쉽게 교체할 수 있습니다.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 연락처(Contact) 섹션 -->
+  <section id="contact" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto scroll-mt-16">
+    <div class="bg-white rounded-3xl p-6 sm:p-12 shadow-md border border-sage/25">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <!-- 왼쪽 연락처 정보 & SNS -->
+        <div class="lg:col-span-5 space-y-6">
+          <div>
+            <span class="text-xs font-bold tracking-widest uppercase text-coral">Contact & Connect</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-charcoal mt-1">함께 소통해요!</h2>
+            <p class="text-sm text-charcoal/75 mt-2 leading-relaxed">
+              간호학 학업 교류, 보건 교육 콘텐츠 협업, 또는 포트폴리오에 대한 피드백이 있으시다면 언제든 편하게 연락해 주세요.
+            </p>
+          </div>
+
+          <!-- 이메일 복사 카드 -->
+          <div class="p-4 rounded-2xl bg-ivoryLight border border-sage/30 space-y-2">
+            <span class="text-xs font-semibold text-charcoal/60 block">E-mail Address</span>
+            <div class="flex items-center justify-between gap-2">
+              <span id="email-text" class="font-semibold text-sm sm:text-base text-darkTealDeep truncate">bomi.nursing@hyejeon.ac.kr</span>
+              <button 
+                id="copy-email-btn"
+                type="button"
+                class="px-3.5 py-2 rounded-xl bg-darkTeal text-white text-xs font-semibold hover:bg-darkTealDeep transition-colors shrink-0 flex items-center gap-1.5"
+              >
+                <i class="fa-regular fa-copy"></i>
+                <span>복사</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- SNS 링크 버튼 -->
+          <div>
+            <span class="text-xs font-semibold text-charcoal/60 block mb-3">Social & Archive</span>
+            <div class="flex flex-wrap gap-3">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-charcoal text-white text-sm font-medium hover:opacity-90 transition-opacity">
+                <i class="fa-brands fa-github text-base"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-coral to-pink-500 text-white text-sm font-medium hover:opacity-90 transition-opacity">
+                <i class="fa-brands fa-instagram text-base"></i>
+                <span>Instagram</span>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-red-600 text-white text-sm font-medium hover:opacity-90 transition-opacity">
+                <i class="fa-brands fa-youtube text-base"></i>
+                <span>YouTube</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 오른쪽 심플 방명록 / 메시지 폼 -->
+        <div class="lg:col-span-7 bg-ivoryLight rounded-2xl p-6 sm:p-8 border border-sage/25">
+          <h3 class="text-lg font-bold text-charcoal mb-4 flex items-center gap-2">
+            <i class="fa-regular fa-paper-plane text-darkTeal"></i>
+            <span>응원 메시지 & 방명록 남기기</span>
+          </h3>
+          
+          <form id="contact-form" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="sender-name" class="block text-xs font-semibold text-charcoal/80 mb-1.5">보내는 분 성함 / 소속</label>
+                <input 
+                  type="text" 
+                  id="sender-name" 
+                  required 
+                  placeholder="예: 홍길동 (간호학과 동기)"
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-sage/30 text-sm focus:outline-none focus:border-darkTeal focus:ring-2 focus:ring-darkTeal/20 transition-all"
+                />
+              </div>
+              <div>
+                <label for="sender-email" class="block text-xs font-semibold text-charcoal/80 mb-1.5">회신받을 이메일 (선택)</label>
+                <input 
+                  type="email" 
+                  id="sender-email" 
+                  placeholder="example@email.com"
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-sage/30 text-sm focus:outline-none focus:border-darkTeal focus:ring-2 focus:ring-darkTeal/20 transition-all"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="sender-message" class="block text-xs font-semibold text-charcoal/80 mb-1.5">메시지 내용</label>
+              <textarea 
+                id="sender-message" 
+                rows="3" 
+                required 
+                placeholder="보미 학생의 멋진 간호사 도전을 응원합니다!"
+                class="w-full px-4 py-3 rounded-xl bg-white border border-sage/30 text-sm focus:outline-none focus:border-darkTeal focus:ring-2 focus:ring-darkTeal/20 transition-all resize-none"
+              ></textarea>
+            </div>
+
+            <button 
+              type="submit" 
+              class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-coral text-white font-semibold text-sm hover:bg-coralDark transition-all shadow-sm hover:shadow flex items-center justify-center gap-2"
+            >
+              <span>메시지 전송하기</span>
+              <i class="fa-solid fa-check"></i>
+            </button>
+          </form>
+
+          <!-- 최근 남긴 메시지 미리보기 영역 -->
+          <div id="guestbook-list" class="mt-6 pt-5 border-t border-sage/25 space-y-2.5">
+            <span class="text-xs font-bold text-charcoal/60 block">최근 응원 한마디</span>
+            <div class="p-3 rounded-xl bg-white border border-sage/20 text-xs sm:text-sm flex items-start justify-between gap-2">
+              <div>
+                <span class="font-bold text-darkTealDeep">혜전대 선배</span>
+                <p class="text-charcoal/80 mt-0.5">CPR 릴스 영상 편집 퀄리티가 정말 좋네요! 1학년 실습도 화이팅입니다 👏</p>
+              </div>
+              <span class="text-[11px] text-charcoal/40 shrink-0">오늘</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer class="bg-darkTealDeep text-white/90 py-10 px-4 sm:px-6 lg:px-8 mt-8">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div>
+        <p class="font-bold text-base text-white">김보미 | 혜전대학교 간호학과 1학년 포트폴리오</p>
+        <p class="text-xs text-white/70 mt-1">따뜻한 마음과 디지털 역량으로 건강한 내일을 만듭니다.</p>
+      </div>
+      <p class="text-xs text-white/60">
+        &copy; 2026 Kim Bo-mi. Hosted on GitHub Pages.
+      </p>
+    </div>
+  </footer>
+
+  <!-- 프로젝트 상세 보기 모달창 -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-charcoal/60 backdrop-blur-sm transition-opacity">
+    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-sage/30 animate-[fadeIn_0.2s_ease-out]">
+      <!-- 모달 상단 헤더 -->
+      <div class="sticky top-0 bg-white/95 backdrop-blur px-6 py-4 border-b border-sage/20 flex items-center justify-between z-10">
+        <span id="modal-category" class="px-3 py-1 rounded-full bg-sage/20 text-darkTealDeep text-xs font-bold">카테고리</span>
+        <button id="close-modal-btn" aria-label="모달 닫기" class="w-9 h-9 rounded-full bg-ivoryLight hover:bg-coral/15 text-charcoal hover:text-coral flex items-center justify-center transition-colors">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- 모달 본문 -->
+      <div class="p-6 sm:p-8 space-y-6">
+        <!-- 미리보기 미디어 영역 (이미지 / 영상 / 인터랙티브 데모 안내) -->
+        <div id="modal-media-container" class="w-full rounded-2xl overflow-hidden bg-ivoryLight border border-sage/25 flex items-center justify-center">
+          <!-- JS에서 동적으로 채워집니다 -->
+        </div>
+
+        <div>
+          <h3 id="modal-title" class="text-xl sm:text-2xl font-bold text-charcoal">프로젝트 제목</h3>
+          <p id="modal-subtitle" class="text-sm font-medium text-darkTeal mt-1">부제목</p>
+        </div>
+
+        <div class="space-y-4 text-sm text-charcoal/85 leading-relaxed">
+          <div>
+            <h4 class="font-bold text-charcoal mb-1 flex items-center gap-1.5">
+              <i class="fa-solid fa-bullseye text-coral"></i> 기획 의도 및 주요 내용
+            </h4>
+            <p id="modal-description"></p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-charcoal mb-1.5 flex items-center gap-1.5">
+              <i class="fa-solid fa-toolbox text-darkTeal"></i> 활용 도구 (Tools & Tech)
+            </h4>
+            <div id="modal-tools" class="flex flex-wrap gap-2"></div>
+          </div>
+        </div>
+
+        <!-- 결과물 바로가기 버튼 -->
+        <div class="pt-4 border-t border-sage/20 flex flex-wrap items-center justify-between gap-3">
+          <span class="text-xs text-charcoal/60">* 실제 배포 링크 또는 파일 경로로 연결됩니다.</span>
+          <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-darkTeal text-white text-sm font-semibold hover:bg-darkTealDeep transition-colors inline-flex items-center gap-2">
+            <span>결과물 전체 보기</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 토스트 알림 메시지 (alert() 대신 사용) -->
+  <div id="toast-notification" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-darkTealDeep text-white px-5 py-3.5 rounded-2xl shadow-xl flex items-center gap-3 text-sm font-medium border border-white/10">
+      <i class="fa-solid fa-circle-check text-sage text-lg"></i>
+      <span id="toast-message">알림 메시지</span>
+    </div>
+  </div>
+
+  <!-- 인터랙션 및 프로젝트 데이터 스크립트 -->
+  <script>
+    /**
+     * ============================================================================
+     * [프로젝트 데이터 설정 영역]
+     * 추후 본인의 실제 영상, 이미지, 게임 링크, PDF 문서 링크로 손쉽게 교체하세요!
+     * ============================================================================
+     */
+    const projectsData = [
+      {
+        id: 'cpr-shorts',
+        category: 'AI 숏폼 영상 · 보건교육',
+        badgeColor: 'bg-coral/15 text-coralDark',
+        title: 'CPR(심폐소생술) 교육 숏폼 영상',
+        subtitle: '혜전대학교 간호학과 대상 9:16 릴스 콘텐츠 기획 및 제작',
+        thumbnail: 'https://placehold.co/600x400/028090/FFFFFF?text=CPR+9:16+Reels+Project',
+        // 실제 유튜브/릴스 임베드 URL 또는 mp4 파일 경로가 있다면 아래 mediaType을 'video'로 바꾸고 mediaUrl을 입력하세요.
+        mediaType: 'image',
+        mediaUrl: 'https://placehold.co/800x450/028090/FFFFFF?text=CPR+Education+Shorts+Preview+(9:16)',
+        summary: '응급 상황에서 누구나 4분의 골든타임을 지킬 수 있도록 핵심 가슴압박 순서를 60초 숏폼(9:16)으로 알기 쉽게 시각화한 보건 교육 영상입니다.',
+        description: '혜전대학교 간호학과 학우 및 일반인을 대상으로 심폐소생술(CPR)의 정확한 위치, 깊이(약 5cm), 속도(분당 100~120회)를 직관적으로 전달하기 위해 기획했습니다. Typecast AI 성우 내레이션으로 명확한 음성 가이드를 제공하고, Suno AI로 110BPM 템포에 맞춘 배경음악을 직접 생성하여 시청자가 자연스럽게 압박 박자를 익힐 수 있도록 제작했습니다.',
+        tools: ['Typecast (AI 내레이션)', 'Suno AI (110BPM 배경음악)', 'CapCut / 숏폼 편집', '간호학 응급처치 가이드'],
+        externalLink: '#cpr-video-link' // 실제 유튜브/구글드라이브 영상 링크로 교체하세요
+      },
+      {
+        id: 'tetris-game',
+        category: '웹 프로그래밍 · 미니게임',
+        badgeColor: 'bg-darkTeal/15 text-darkTealDeep',
+        title: '웹 기반 인터랙티브 테트리스 게임',
+        subtitle: 'HTML5 Canvas & JavaScript로 구현한 클래식 퍼즐 게임',
+        thumbnail: 'https://placehold.co/600x400/84B59F/FFFFFF?text=Web+Tetris+Game+Project',
+        mediaType: 'image',
+        mediaUrl: 'https://placehold.co/800x450/84B59F/FFFFFF?text=Interactive+Tetris+Gameplay+Screen',
+        summary: '순수 웹 표준 기술(HTML, CSS, JavaScript)만을 활용하여 브라우저에서 즉시 실행 가능한 반응형 테트리스 웹 게임을 구현했습니다.',
+        description: '논리적 사고력과 프로그래밍 기초 역량을 기르기 위해 제작한 웹 미니게임 프로젝트입니다. 2차원 배열을 활용한 블록 회전 알고리즘, 줄 완성 판정 및 점수 시스템, 레벨별 낙하 속도 증가 로직을 직접 구현했으며 모바일과 데스크톱 환경 모두에서 쾌적하게 플레이할 수 있도록 설계했습니다.',
+        tools: ['HTML5 Canvas', 'CSS3 / Tailwind', 'Vanilla JavaScript', 'GitHub Pages 배포'],
+        externalLink: '#tetris-game-link' // 실제 테트리스 게임 배포 링크로 교체하세요
+      },
+      {
+        id: 'health-poster',
+        category: '인포그래픽 · 건강 캠페인',
+        badgeColor: 'bg-sage/30 text-darkTealDeep',
+        title: '건강 캠페인 포스터 & 카드뉴스',
+        subtitle: '올바른 손씻기 감염 예방 및 임상실습 준비 수칙 인포그래픽',
+        thumbnail: 'https://placehold.co/600x400/F96167/FFFFFF?text=Health+Campaign+Poster',
+        mediaType: 'image',
+        mediaUrl: 'https://placehold.co/800x450/F96167/FFFFFF?text=Hand+Hygiene+%26+Clinical+Practice+Infographic',
+        summary: '병원 내 감염 관리의 기본인 올바른 손씻기 6단계와 예비 간호사를 위한 임상실습 필수 체크리스트를 담은 시각 디자인 결과물입니다.',
+        description: '의료 현장에서 가장 중요하지만 놓치기 쉬운 손 위생 수칙을 한눈에 들어오는 아이콘과 따뜻한 컬러 팔레트로 시각화했습니다. 또한 첫 임상실습을 앞둔 간호학과 1~2학년 학우들을 위해 복장, 활력징후 측정 준비물, 환자 안전 수칙을 정리한 카드뉴스 세트를 함께 제작하여 학습 자료로 활용했습니다.',
+        tools: ['Canva / Figma', '인포그래픽 시각화', '감염관리 간호학', '카드뉴스 기획'],
+        externalLink: '#poster-pdf-link' // 실제 포스터 이미지/PDF 링크로 교체하세요
+      }
+    ];
+
+    // DOM 요소 참조
+    const projectsGrid = document.getElementById('projects-grid');
+    const modal = document.getElementById('project-modal');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const copyEmailBtn = document.getElementById('copy-email-btn');
+    const contactForm = document.getElementById('contact-form');
+    const toast = document.getElementById('toast-notification');
+    const toastMessage = document.getElementById('toast-message');
+
+    // 토스트 알림 함수
+    let toastTimeout;
+    function showToast(message) {
+      toastMessage.textContent = message;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 3000);
+    }
+
+    // 프로젝트 카드 렌더링
+    function renderProjects() {
+      projectsGrid.innerHTML = projectsData.map((project, index) => `
+        <article 
+          onclick="openProjectModal(${index})"
+          class="group cursor-pointer bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-sage/25 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5"
+        >
+          <div>
+            <!-- 썸네일 영역 -->
+            <div class="relative aspect-[16/10] bg-ivoryLight overflow-hidden">
+              <img 
+                src="${project.thumbnail}" 
+                alt="${project.title}" 
+                onerror="this.src='https://placehold.co/600x400/84B59F/FFFFFF?text=Project+Preview'"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                <span class="text-white text-xs font-semibold flex items-center gap-1.5">
+                  <i class="fa-solid fa-magnifying-glass-plus"></i> 상세 내용 및 미리보기
+                </span>
+              </div>
+            </div>
+
+            <!-- 텍스트 본문 -->
+            <div class="p-6">
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold ${project.badgeColor} mb-3">
+                ${project.category}
+              </span>
+              <h3 class="text-lg font-bold text-charcoal group-hover:text-darkTeal transition-colors">
+                ${project.title}
+              </h3>
+              <p class="text-sm text-charcoal/75 mt-2 line-clamp-2 leading-relaxed">
+                ${project.summary}
+              </p>
+            </div>
+          </div>
+
+          <!-- 카드 하단 툴 태그 & 더보기 -->
+          <div class="px-6 pb-6 pt-2 flex items-center justify-between border-t border-sage/15 mt-2">
+            <span class="text-xs font-medium text-charcoal/60 truncate max-w-[70%]">
+              ${project.tools.slice(0, 2).join(' · ')}
+            </span>
+            <span class="text-xs font-bold text-darkTeal group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+              자세히 <i class="fa-solid fa-chevron-right text-[10px]"></i>
+            </span>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    // 프로젝트 상세 모달 열기
+    function openProjectModal(index) {
+      const project = projectsData[index];
+      if (!project) return;
+
+      document.getElementById('modal-category').textContent = project.category;
+      document.getElementById('modal-title').textContent = project.title;
+      document.getElementById('modal-subtitle').textContent = project.subtitle;
+      document.getElementById('modal-description').textContent = project.description;
+
+      // 미디어 컨테이너 렌더링 (이미지 또는 비디오)
+      const mediaContainer = document.getElementById('modal-media-container');
+      if (project.mediaType === 'video') {
+        mediaContainer.innerHTML = `
+          <video controls class="w-full max-h-80 bg-black">
+            <source src="${project.mediaUrl}" type="video/mp4">
+            브라우저가 비디오 태그를 지원하지 않습니다.
+          </video>
+        `;
+      } else {
+        mediaContainer.innerHTML = `
+          <img 
+            src="${project.mediaUrl}" 
+            alt="${project.title} 미리보기" 
+            onerror="this.src='https://placehold.co/800x450/028090/FFFFFF?text=Preview+Image'"
+            class="w-full max-h-80 object-cover"
+          />
+        `;
+      }
+
+      // 사용 툴 뱃지 렌더링
+      const toolsContainer = document.getElementById('modal-tools');
+      toolsContainer.innerHTML = project.tools.map(tool => `
+        <span class="px-3 py-1.5 rounded-xl bg-ivoryLight border border-sage/30 text-xs font-semibold text-charcoal">
+          ${tool}
+        </span>
+      `).join('');
+
+      // 외부 링크 설정
+      const modalLink = document.getElementById('modal-link');
+      modalLink.href = project.externalLink;
+      modalLink.onclick = (e) => {
+        if (project.externalLink.startsWith('#')) {
+          e.preventDefault();
+          showToast('실제 배포 파일(영상/게임/PDF) 링크를 연결하면 새 창에서 열립니다!');
+        }
+      };
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // 모달 닫기
+    function closeProjectModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    closeModalBtn.addEventListener('click', closeProjectModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeProjectModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeProjectModal();
+      }
+    });
+
+    // 모바일 메뉴 토글
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // 이메일 복사 기능 (iframe 호환 execCommand 방식 적용)
+    copyEmailBtn.addEventListener('click', () => {
+      const emailText = document.getElementById('email-text').textContent.trim();
+      const tempInput = document.createElement('textarea');
+      tempInput.value = emailText;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand('copy');
+        showToast('이메일 주소가 클립보드에 복사되었습니다!');
+      } catch (err) {
+        showToast('이메일 복사: ' + emailText);
+      }
+      document.body.removeChild(tempInput);
+    });
+
+    // 방명록 / 메시지 보내기 폼 제출 처리
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nameInput = document.getElementById('sender-name');
+      const msgInput = document.getElementById('sender-message');
+      const guestbookList = document.getElementById('guestbook-list');
+
+      const name = nameInput.value.trim();
+      const msg = msgInput.value.trim();
+
+      if (!name || !msg) return;
+
+      // 새 방명록 아이템 추가
+      const newEntry = document.createElement('div');
+      newEntry.className = 'p-3 rounded-xl bg-white border border-sage/30 text-xs sm:text-sm flex items-start justify-between gap-2 transition-all';
+      newEntry.innerHTML = `
+        <div>
+          <span class="font-bold text-darkTealDeep"></span>
+          <p class="text-charcoal/80 mt-0.5"></p>
+        </div>
+        <span class="text-[11px] text-coral font-semibold shrink-0">방금 전</span>
+      `;
+      newEntry.querySelector('span.font-bold').textContent = name;
+      newEntry.querySelector('p').textContent = msg;
+
+      guestbookList.appendChild(newEntry);
+      contactForm.reset();
+      showToast(`${name}님의 따뜻한 메시지가 등록되었습니다!`);
+    });
+
+    // 초기 렌더링 실행
+    window.addEventListener('DOMContentLoaded', renderProjects);
+  </script>
+</body>
+</html>
